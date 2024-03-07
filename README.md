@@ -1,252 +1,234 @@
-<!--
-  Licensed to the Apache Software Foundation (ASF) under one
-  or more contributor license agreements.  See the NOTICE file
-  distributed with this work for additional information
-  regarding copyright ownership.  The ASF licenses this file
-  to you under the Apache License, Version 2.0 (the
-  "License"); you may not use this file except in compliance
-  with the License.  You may obtain a copy of the License at
-
-      https://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing,
-  software distributed under the License is distributed on an
-  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-  KIND, either express or implied.  See the License for the
-  specific language governing permissions and limitations
-  under the License.
-  -->
-[![Maven central](https://img.shields.io/maven-central/v/org.apache.plc4x/plc4j-api.svg)](https://img.shields.io/maven-central/v/org.apache.plc4x/plc4j-api.svg)
-[![License](https://img.shields.io/github/license/apache/plc4x.svg)](https://www.apache.org/licenses/LICENSE-2.0)
-[![Jenkins Build Status](https://ci-builds.apache.org/job/PLC4X/job/PLC4X/job/develop/badge/icon)](https://ci-builds.apache.org/job/PLC4X/job/PLC4X/job/develop/)
-[![Last commit](https://img.shields.io/github/last-commit/apache/plc4x.svg)]()
-[![Twitter](https://img.shields.io/twitter/follow/ApachePLC4X.svg?label=Follow&style=social)](https://twitter.com/ApachePLC4X)
-[![Java Platform compatibility](https://github.com/apache/plc4x/actions/workflows/java-platform.yml/badge.svg)](https://github.com/apache/plc4x/actions/workflows/java-platform.yml)
-[![Go Platform compatibility](https://github.com/apache/plc4x/actions/workflows/go-platform.yml/badge.svg)](https://github.com/apache/plc4x/actions/workflows/go-platform.yml)
-[![C Platform compatibility](https://github.com/apache/plc4x/actions/workflows/c-platform.yml/badge.svg)](https://github.com/apache/plc4x/actions/workflows/c-platform.yml)
-[![Python Platform Compatibility](https://github.com/apache/plc4x/actions/workflows/python-platform.yml/badge.svg)](https://github.com/apache/plc4x/actions/workflows/python-platform.yml)
-
-<h1 align="center">
+<div class="Box-sc-g0xbh4-0 bJMeLZ js-snippet-clipboard-copy-unpositioned" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text">
+<p dir="auto"><a href="https://img.shields.io/maven-central/v/org.apache.plc4x/plc4j-api.svg" rel="nofollow"><img src="https://camo.githubusercontent.com/eace5e2cab2f8b62f98ab6ebd32e27995290eeb2666971e8d0ba550d37854e6f/68747470733a2f2f696d672e736869656c64732e696f2f6d6176656e2d63656e7472616c2f762f6f72672e6170616368652e706c6334782f706c63346a2d6170692e737667" alt="Maven中央" data-canonical-src="https://img.shields.io/maven-central/v/org.apache.plc4x/plc4j-api.svg" style="max-width: 100%;"></a>
+<a href="https://www.apache.org/licenses/LICENSE-2.0" rel="nofollow"><img src="https://camo.githubusercontent.com/5a2f631e8368ae2832a625086ac94a8099e5ec1889334c500ff6ec76b4b8f0c8/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6963656e73652f6170616368652f706c6334782e737667" alt="执照" data-canonical-src="https://img.shields.io/github/license/apache/plc4x.svg" style="max-width: 100%;"></a>
+<a href="https://ci-builds.apache.org/job/PLC4X/job/PLC4X/job/develop/" rel="nofollow"><img src="https://camo.githubusercontent.com/daf81f0075f0f09fab2971123c085a5560f4ad4e7c370b93b9bb272bb6a4ecf6/68747470733a2f2f63692d6275696c64732e6170616368652e6f72672f6a6f622f504c4334582f6a6f622f504c4334582f6a6f622f646576656c6f702f62616467652f69636f6e" alt="Jenkins 构建状态" data-canonical-src="https://ci-builds.apache.org/job/PLC4X/job/PLC4X/job/develop/badge/icon" style="max-width: 100%;"></a>
+<a href="/apache/plc4x/blob/develop"><img src="https://camo.githubusercontent.com/fcb627bfe590109b4b94473d4b90823dac066a8ea859140b3847a52ca5f00d5c/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6173742d636f6d6d69742f6170616368652f706c6334782e737667" alt="最后一次提交" data-canonical-src="https://img.shields.io/github/last-commit/apache/plc4x.svg" style="max-width: 100%;"></a>
+<a href="https://twitter.com/ApachePLC4X" rel="nofollow"><img src="https://camo.githubusercontent.com/be3e36730d039e8ad6af5a24c92e83ab81e5b4dfd61d8462eb27b80044d03dfa/68747470733a2f2f696d672e736869656c64732e696f2f747769747465722f666f6c6c6f772f417061636865504c4334582e7376673f6c6162656c3d466f6c6c6f77267374796c653d736f6369616c" alt="推特" data-canonical-src="https://img.shields.io/twitter/follow/ApachePLC4X.svg?label=Follow&amp;style=social" style="max-width: 100%;"></a>
+<a href="https://github.com/apache/plc4x/actions/workflows/java-platform.yml"><img src="https://github.com/apache/plc4x/actions/workflows/java-platform.yml/badge.svg" alt="Java 平台兼容性" style="max-width: 100%;"></a>
+<a href="https://github.com/apache/plc4x/actions/workflows/go-platform.yml"><img src="https://github.com/apache/plc4x/actions/workflows/go-platform.yml/badge.svg" alt="Go平台兼容性" style="max-width: 100%;"></a>
+<a href="https://github.com/apache/plc4x/actions/workflows/c-platform.yml"><img src="https://github.com/apache/plc4x/actions/workflows/c-platform.yml/badge.svg" alt="C 平台兼容性" style="max-width: 100%;"></a>
+<a href="https://github.com/apache/plc4x/actions/workflows/python-platform.yml"><img src="https://github.com/apache/plc4x/actions/workflows/python-platform.yml/badge.svg" alt="Python 平台兼容性" style="max-width: 100%;"></a></p>
+<div class="markdown-heading" dir="auto"><h1 align="center" tabindex="-1" class="heading-element" dir="auto">
   <br>
-   <a href="https://plc4x.apache.org"><img src="https://plc4x.apache.org/images/apache_plc4x_logo.png" 
-   alt="Apache PLC4X Logo" title="Apache PLC4X Logo"/></a>
+   <a href="https://plc4x.apache.org" rel="nofollow"><img src="https://camo.githubusercontent.com/a3ffe2e4519af6666c5b0e8a7a0553456f4dcc802c1171a42358b457272fae33/68747470733a2f2f706c6334782e6170616368652e6f72672f696d616765732f6170616368655f706c6334785f6c6f676f2e706e67" alt="阿帕奇 PLC4X 徽标" title="阿帕奇 PLC4X 徽标" data-canonical-src="https://plc4x.apache.org/images/apache_plc4x_logo.png" style="max-width: 100%;"></a>
   <br>
-</h1>
-<h3 align="center">The Industrial IoT adapter</h3>
-<h4 align="center">The ultimate goal of PLC4X is to create a set of libraries, that allow unified access to any type of
- PLC</h4>
-
-***
-
-# Table of contents
-
-* [About PLC4X](#about-apache-plc4x)
-* [Getting Started](#getting-started)
-* [Developers](#developers)
-* [Community](#community)
-* [Contributing](#contributing)
-* [Licensing](#licensing)
-
-***
-
-## About Apache PLC4X
-
-Apache PLC4X is an effort to create a set of libraries for communicating with industrial grade programmable logic controllers (PLCs) in a uniform way.
-We are planning on shipping libraries for usage in:
-
-1. Java
-2. Go
-3. C (not ready for usage)
-4. Python (not ready for usage)
-5. C# (.Net) (not ready for usage - abandoned)
-
-PLC4X also integrates with other Apache projects, such as:
-
-* [Apache Calcite](https://calcite.apache.org/)
-* [Apache Camel](https://camel.apache.org/)
-* [Apache Kafka-Connect](https://kafka.apache.org)
-* [Apache Karaf](https://karaf.apache.org/)
-* [Apache NiFi](https://nifi.apache.org/)
-
-And brings stand-alone (Java) utils like:
-
-* OPC-UA Server: Enables you to communicate with legacy devices using PLC4X with OPC-UA.
-* PLC4X Server: Enables you to communicate with a central PLC4X Server which then communicates with devices via PLC4X.
-
-It also provides (Java) tools for usage inside an application:
-
-* Connection Cache: New implementation of our framework for re-using and sharing PLC-connections
-* Connection Pool: Old implementation of our framework for re-using and sharing PLC-connections
-* OPM: Object-Plc-Mapping: Allows binding PLC fields to properties in java POJOs similar to JPA
-* Scraper: Utility to do scheduled and repeated data collection.
-
-## Getting started
-
-Depending on the programming language, the usage will differ, therefore please go to the
-[Getting Started](https://plc4x.apache.org/users/getting-started/plc4j.html) on the PLC4X website to look up
-the language of choice.
-
-### Java
-
-NOTE: Currently the Java version which supports building of all parts of Apache PLC4X is at least Java 19 (We have tested all versions up to Java 21), however it's only the Java Tool UI, that requires this right now. All other modules need at least Java 11. 
-
-See the PLC4J user guide on the website to start using PLC4X in your Java application:
-[https://plc4x.apache.org/users/getting-started/plc4j.html](https://plc4x.apache.org/users/getting-started/plc4j.html)
-
-## Developers
-
-### Environment
-
-Currently, the project is configured to require the following software:
-
-1. Java 11 JDK: For running Maven in general as well as compiling the Java and Scala modules `JAVA_HOME` configured to point to that.
-2. Git (even when working on the source distribution)
-3. (Optional, for running all tests) libpcap/Npcap for raw socket tests in Java or use of `passive-mode` drivers
-4. (Optional, for building the website) [Graphviz](https://www.graphviz.org/) : For generating the graphs in the documentation
-
-WARNING: The code generation uses a utility which requires some additional VM settings. When running a build from the root, the settings in the `.mvn/jvm.config` are automatically applied. When building only a sub-module, it is important to set the vm args: `--add-exports jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED --add-exports jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED --add-exports jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED --add-exports jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED --add-exports jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED`. In Intellij for example set these in the IDE settings under: Preferences | Build, Execution, Deployment | Build Tools | Maven | Runner: JVM Options.
-
-A more detailed description is available on our website:
-
-https://plc4x.apache.org/developers/preparing/index.html
-
-#### For building `PLC4C` we also need:
-
-All requirements are retrieved by the build itself
-
-#### For building `PLC4Go` we also need:
-
-All requirements are retrieved by the build itself
-
-#### For building `PLC4Py` we also need:
-
-1. Python 3.7 or higher
-2. Python pyenv
-
-#### For building `PLC4Net` we also need:
-
-1. DotNet SDK 6.0
-
-With this setup you will be able to build the Java part of PLC4X.
-
-The when doing a full build, we automatically run a prerequisite check and fail the build with an explanation, if not all requirements are meet.
-
-### Building with Docker
-
-If you don't want to bother setting up the environment on your normal system, and you have Docker installed, you can also build everything in a Docker container:
-
-```
-   docker compose up
-```
-
-This will build a local Docker container able to build all parts of PLC4X and will run a maven build of the local directory inside this container.
-
-The default build will run a local release-build, so it can also be used to ensure reproducible builds when releasing.
-
-Per default will it store files locally:
-- Downloaded maven artifacts will go to `out/.repository`
-- Deployed artifacts will go to `out/.local-snapshots-dir`
-
-The reason for this is, that otherwise the artifacts would be packaged in with the source-release artifact, resulting in a 12GB or more zip archive.
-However, saving it in the main `target` directory would make the build delete the local repo every time a `mvn clean` is run.
-The `out` directory however is excluded per default from the assembly descriptor, and therefore it is not included in the source zim.
-
-### Getting Started
-
-You must have at least Java 11 installed on your system and connectivity to Maven Central
-(for downloading external third party dependencies). Maven 3.6 is required to build, so be sure it's installed and available on your system.
-
-NOTE: When using Java 21 currently the Apache Kafka integration module is excluded from the build as one of the plugins it requires has proven to be incompatible with this version.
-
-NOTE: There is a convenience Maven-Wrapper installed in the repo, when used, this automatically downloads and installs Maven. If you want to use this, please use `./mvnw` or `mvnw` instead of the normal `mvn` command.
-
-NOTE: When running from sources-zip, the `mvnw` might not be executable on `Mac` or `Linux`. This can easily be fixed by running the following command in the directory.
-
-```
-$ chmod +x mvnw
-```
-
-NOTE: If you are working on a `Windows` system, please use `mvnw.cmd` instead of `./mvnw` in the following build commands.
-
-Build PLC4X Java jars and install them in your local maven repository
-
-```
-./mvnw install
-```
-
-You can now construct Java applications that use PLC4X. The PLC4X examples
-are a good place to start and are available inside the `plc4j/examples`
-directory.
-
-The `Go` drivers can be built by enabling the `with-go` profile:
-
-```
-./mvnw -P with-go install 
-```
-
-The `Java` drivers can be built by enabling the `with-java` profile:
-
-```
-./mvnw -P with-java install 
-```
-
-The `C# / .Net` implementation is currently in a `work in progress` state.
-In order to be able to build the `C# / .Net` module, you currently need to activate the:
-`with-dotnet` profiles.
-
-```
-./mvnw -P with-dotnet install
-```
-
-The Python implementation is currently in a somewhat unclean state and still needs refactoring.
-In order to be able to build the Python module, you currently need to activate the:
-`with-sandbox` and `with-python` profiles.
-
-```
-./mvnw -P with-sandbox,with-python install
-```
-
-In order to build everything the following command should work:
-
-```
-./mvnw -P with-c,with-dotnet,with-go,with-java,with-python,with-sandbox,enable-all-checks,update-generated-code install
-```
-
-## Community
-
-Join the PLC4X community by using one of the following channels. We'll be glad to help!
-
-### Mailing Lists
-
-Subscribe to the following mailing lists:
-* Apache PLC4X Developer List: [dev-subscribe@plc4x.apache.org](mailto:dev-subscribe@plc4x.apache.org)
-* Apache PLC4X Commits List: [commits-subscribe@plc4x.apache.org](mailto:commits-subscribe@plc4x.apache.org)
-* Apache PLC4X Jira Notification List: [issues-subscribe@plc4x.apache.org](mailto:issues-subscribe@plc4x.apache.org)
-
-See also: [https://plc4x.apache.org/mailing-lists.html](https://plc4x.apache.org/mailing-lists.html)
-
-### Twitter
-
-Get the latest PLC4X news on Twitter: [https://twitter.com/ApachePlc4x](https://twitter.com/ApachePlc4x)
-
-## Contributing
-
-There are multiple forms in which you can become involved with the PLC4X project.
-
-These are, but are not limited to:
-
-* Providing information and insights
-* Testing PLC4X and providing feedback
-* Submitting Pull Requests
-* Filing Bug-Reports
-* Active communication on our mailing lists
-* Promoting the project (articles, blog posts, talks at conferences)
-* Documentation
-
-We are a very friendly bunch so don’t be afraid to step forward.
-If you'd like to contribute to PLC4X, have a look at our
-[contribution guide](https://plc4x.apache.org/developers/contributing.html)!
-
-## Licensing
-
-Apache PLC4X is released under the Apache License Version 2.0.
+</h1><a id="user-content--------" class="anchor" aria-label="永久链接：" href="#-------"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<div class="markdown-heading" dir="auto"><h3 align="center" tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">工业物联网适配器</font></font></h3><a id="user-content-the-industrial-iot-adapter" class="anchor" aria-label="永久链接：工业物联网适配器" href="#the-industrial-iot-adapter"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<div class="markdown-heading" dir="auto"><h4 align="center" tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PLC4X的最终目标是创建一组库，允许统一访问任何类型的PLC</font></font></h4><a id="user-content-the-ultimate-goal-of-plc4x-is-to-create-a-set-of-libraries-that-allow-unified-access-to-any-type-of-plc" class="anchor" aria-label="永久链接：PLC4X 的最终目标是创建一组库，允许统一访问任何类型的 PLC" href="#the-ultimate-goal-of-plc4x-is-to-create-a-set-of-libraries-that-allow-unified-access-to-any-type-of-plc"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<hr>
+<div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">目录</font></font></h1><a id="user-content-table-of-contents" class="anchor" aria-label="永久链接：目录" href="#table-of-contents"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ul dir="auto">
+<li><a href="#about-apache-plc4x"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">关于PLC4X</font></font></a></li>
+<li><a href="#getting-started"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">入门</font></font></a></li>
+<li><a href="#developers"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">开发商</font></font></a></li>
+<li><a href="#community"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">社区</font></font></a></li>
+<li><a href="#contributing"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">贡献</font></font></a></li>
+<li><a href="#licensing"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">许可</font></font></a></li>
+</ul>
+<hr>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">关于阿帕奇 PLC4X</font></font></h2><a id="user-content-about-apache-plc4x" class="anchor" aria-label="永久链接：关于 Apache PLC4X" href="#about-apache-plc4x"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache PLC4X 致力于创建一组库，用于以统一的方式与工业级可编程逻辑控制器 (PLC) 进行通信。</font><font style="vertical-align: inherit;">我们计划将库用于：</font></font></p>
+<ol dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">爪哇</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">去</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">C（未准备好使用）</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Python（尚未准备好使用）</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">C# (.Net)（尚未准备好使用 - 已放弃）</font></font></li>
+</ol>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PLC4X 还与其他 Apache 项目集成，例如：</font></font></p>
+<ul dir="auto">
+<li><a href="https://calcite.apache.org/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">阿帕奇方解石</font></font></a></li>
+<li><a href="https://camel.apache.org/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">阿帕奇骆驼</font></font></a></li>
+<li><a href="https://kafka.apache.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache Kafka 连接</font></font></a></li>
+<li><a href="https://karaf.apache.org/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">阿帕奇·卡拉夫</font></font></a></li>
+<li><a href="https://nifi.apache.org/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">阿帕奇NiFi</font></font></a></li>
+</ul>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">并带来独立（Java）实用程序，例如：</font></font></p>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">OPC-UA 服务器：使您能够使用带有 OPC-UA 的 PLC4X 与传统设备进行通信。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PLC4X 服务器：使您能够与中央 PLC4X 服务器通信，然后中央 PLC4X 服务器通过 PLC4X 与设备通信。</font></font></li>
+</ul>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">它还提供了在应用程序内部使用的 (Java) 工具：</font></font></p>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">连接缓存：用于重用和共享 PLC 连接的框架的新实现</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">连接池：我们框架的旧实现，用于重用和共享 PLC 连接</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">OPM：Object-Plc-Mapping：允许将 PLC 字段绑定到类似于 JPA 的 java POJO 中的属性</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Scraper：用于进行计划和重复数据收集的实用程序。</font></font></li>
+</ul>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">入门</font></font></h2><a id="user-content-getting-started" class="anchor" aria-label="永久链接：开始使用" href="#getting-started"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">根据编程语言的不同，用法也会有所不同，因此请访问
+PLC4X 网站上的</font></font><a href="https://plc4x.apache.org/users/getting-started/plc4j.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">入门指南</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">查找所选语言。</font></font></p>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">爪哇</font></font></h3><a id="user-content-java" class="anchor" aria-label="永久链接：Java" href="#java"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">注意：目前支持构建 Apache PLC4X 所有部分的 Java 版本至少是 Java 19（我们已经测试了 Java 21 之前的所有版本），但是现在只有 Java 工具 UI 需要此功能。</font><font style="vertical-align: inherit;">所有其他模块至少需要 Java 11。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">请参阅网站上的 PLC4J 用户指南，开始在 Java 应用程序中使用 PLC4X：
+ https: </font></font><a href="https://plc4x.apache.org/users/getting-started/plc4j.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">//plc4x.apache.org/users/getting-started/plc4j.html</font></font></a></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">开发商</font></font></h2><a id="user-content-developers" class="anchor" aria-label="永久链接：开发人员" href="#developers"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">环境</font></font></h3><a id="user-content-environment" class="anchor" aria-label="永久链接：环境" href="#environment"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">目前，该项目配置为需要以下软件：</font></font></p>
+<ol dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Java 11 JDK：用于一般运行 Maven 以及编译</font></font><code>JAVA_HOME</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">配置为指向它的 Java 和 Scala 模块。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Git（即使在源代码发行版上工作时）</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（可选，用于运行所有测试）libpcap/Npcap 用于 Java 中的原始套接字测试或使用</font></font><code>passive-mode</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">驱动程序</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（可选，用于构建网站）</font></font><a href="https://www.graphviz.org/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Graphviz</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：用于生成文档中的图表</font></font></li>
+</ol>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">警告：代码生成使用的实用程序需要一些额外的 VM 设置。</font><font style="vertical-align: inherit;">从根目录运行构建时，</font></font><code>.mvn/jvm.config</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">会自动应用 中的设置。</font><font style="vertical-align: inherit;">仅构建子模块时，设置 vm args: 非常重要</font></font><code>--add-exports jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED --add-exports jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED --add-exports jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED --add-exports jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED --add-exports jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font><font style="vertical-align: inherit;">例如，在 Intellij 中，在 IDE 设置中设置这些设置：Preferences | </font><font style="vertical-align: inherit;">构建、执行、部署 | </font><font style="vertical-align: inherit;">构建工具| </font><font style="vertical-align: inherit;">Maven | </font><font style="vertical-align: inherit;">运行器：JVM 选项。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">更详细的描述可以在我们的网站上找到：</font></font></p>
+<p dir="auto"><a href="https://plc4x.apache.org/developers/preparing/index.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">https://plc4x.apache.org/developers/preparing/index.html</font></font></a></p>
+<div class="markdown-heading" dir="auto"><h4 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">为了构建</font></font><code>PLC4C</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我们还需要：</font></font></h4><a id="user-content-for-building-plc4c-we-also-need" class="anchor" aria-label="永久链接：为了构建 PLC4C，我们还需要：" href="#for-building-plc4c-we-also-need"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">所有需求均由构建本身检索</font></font></p>
+<div class="markdown-heading" dir="auto"><h4 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">为了构建</font></font><code>PLC4Go</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我们还需要：</font></font></h4><a id="user-content-for-building-plc4go-we-also-need" class="anchor" aria-label="永久链接：为了构建 PLC4Go，我们还需要：" href="#for-building-plc4go-we-also-need"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">所有需求均由构建本身检索</font></font></p>
+<div class="markdown-heading" dir="auto"><h4 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">为了构建</font></font><code>PLC4Py</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我们还需要：</font></font></h4><a id="user-content-for-building-plc4py-we-also-need" class="anchor" aria-label="永久链接：为了构建 PLC4Py，我们还需要：" href="#for-building-plc4py-we-also-need"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ol dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Python 3.7 或更高版本</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Python pyenv</font></font></li>
+</ol>
+<div class="markdown-heading" dir="auto"><h4 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">为了构建</font></font><code>PLC4Net</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我们还需要：</font></font></h4><a id="user-content-for-building-plc4net-we-also-need" class="anchor" aria-label="永久链接：为了构建 PLC4Net，我们还需要：" href="#for-building-plc4net-we-also-need"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ol dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">点网 SDK 6.0</font></font></li>
+</ol>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">通过此设置，您将能够构建 PLC4X 的 Java 部分。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在进行完整构建时，我们会自动运行先决条件检查，如果未满足所有要求，则构建失败并给出解释。</font></font></p>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">使用 Docker 构建</font></font></h3><a id="user-content-building-with-docker" class="anchor" aria-label="永久链接：使用 Docker 构建" href="#building-with-docker"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果你不想在普通系统上设置环境，并且已经安装了 Docker，那么你也可以在 Docker 容器中构建所有内容：</font></font></p>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>   docker compose up
+</code></pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="   docker compose up" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">这将构建一个本地 Docker 容器，能够构建 PLC4X 的所有部分，并将运行该容器内本地目录的 Maven 构建。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">默认构建将运行本地发布构建，因此它也可用于确保发布时的可重现构建。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">默认情况下它将在本地存储文件：</font></font></p>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">下载的 Maven 工件将转到</font></font><code>out/.repository</code></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">部署的工件将转到</font></font><code>out/.local-snapshots-dir</code></li>
+</ul>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">这样做的原因是，否则这些工件将与源发布工件一起打包，从而产生 12GB 或更多的 zip 存档。</font><font style="vertical-align: inherit;">但是，将其保存在主</font></font><code>target</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">目录中将使构建在每次</font></font><code>mvn clean</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">运行 a 时删除本地存储库。</font><font style="vertical-align: inherit;">然而，该</font></font><code>out</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">目录默认从程序集描述符中排除，因此它不包含在源 zim 中。</font></font></p>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">入门</font></font></h3><a id="user-content-getting-started-1" class="anchor" aria-label="永久链接：开始使用" href="#getting-started-1"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">您的系统上必须至少安装 Java 11 并连接到 Maven Central（用于下载外部第三方依赖项）。</font><font style="vertical-align: inherit;">构建需要 Maven 3.6，因此请确保它已安装并在您的系统上可用。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">注意：当前使用 Java 21 时，Apache Kafka 集成模块被排除在构建之外，因为它所需的插件之一已被证明与此版本不兼容。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">注意：存储库中安装了一个方便的 Maven-Wrapper，使用时，它会自动下载并安装 Maven。</font><font style="vertical-align: inherit;">如果您想使用它，请使用</font></font><code>./mvnw</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">或</font></font><code>mvnw</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">代替普通</font></font><code>mvn</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">命令。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">注意：从 resources-zip 运行时，</font></font><code>mvnw</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">可能无法在</font></font><code>Mac</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">或上执行</font></font><code>Linux</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font><font style="vertical-align: inherit;">通过在目录中运行以下命令可以轻松修复此问题。</font></font></p>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>$ chmod +x mvnw
+</code></pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="$ chmod +x mvnw" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">注意：如果您正在使用</font></font><code>Windows</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">系统，请</font><font style="vertical-align: inherit;">在以下构建命令中使用</font></font><code>mvnw.cmd</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">代替。</font></font><code>./mvnw</code><font style="vertical-align: inherit;"></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">构建 PLC4X Java jar 并将其安装在本地 Maven 存储库中</font></font></p>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>./mvnw install
+</code></pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="./mvnw install" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">您现在可以构建使用 PLC4X 的 Java 应用程序。</font><font style="vertical-align: inherit;">PLC4X 示例是一个很好的起点，可以在</font></font><code>plc4j/examples</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+目录中找到。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"></font><code>Go</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">可以通过启用配置文件来构建驱动</font><font style="vertical-align: inherit;">程序</font></font><code>with-go</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：</font></font></p>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>./mvnw -P with-go install 
+</code></pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="./mvnw -P with-go install " tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<p dir="auto"><font style="vertical-align: inherit;"></font><code>Java</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">可以通过启用配置文件来构建驱动</font><font style="vertical-align: inherit;">程序</font></font><code>with-java</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：</font></font></p>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>./mvnw -P with-java install 
+</code></pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="./mvnw -P with-java install " tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<p dir="auto"><font style="vertical-align: inherit;"></font><code>C# / .Net</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">目前正处于实施</font><font style="vertical-align: inherit;">状态</font></font><code>work in progress</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font><font style="vertical-align: inherit;">为了能够构建该</font></font><code>C# / .Net</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">模块，您当前需要激活：
+</font></font><code>with-dotnet</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">配置文件。</font></font></p>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>./mvnw -P with-dotnet install
+</code></pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="./mvnw -P with-dotnet install" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Python 实现目前处于某种不干净的状态，仍然需要重构。</font><font style="vertical-align: inherit;">为了能够构建 Python 模块，您当前需要激活：
+</font></font><code>with-sandbox</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">和</font></font><code>with-python</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">配置文件。</font></font></p>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>./mvnw -P with-sandbox,with-python install
+</code></pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="./mvnw -P with-sandbox,with-python install" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">为了构建一切，以下命令应该起作用：</font></font></p>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>./mvnw -P with-c,with-dotnet,with-go,with-java,with-python,with-sandbox,enable-all-checks,update-generated-code install
+</code></pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="./mvnw -P with-c,with-dotnet,with-go,with-java,with-python,with-sandbox,enable-all-checks,update-generated-code install" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">社区</font></font></h2><a id="user-content-community" class="anchor" aria-label="永久链接：社区" href="#community"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">使用以下渠道之一加入 PLC4X 社区。</font><font style="vertical-align: inherit;">我们很乐意提供帮助！</font></font></p>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">邮件列表</font></font></h3><a id="user-content-mailing-lists" class="anchor" aria-label="永久链接：邮件列表" href="#mailing-lists"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">订阅以下邮件列表：</font></font></p>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache PLC4X 开发人员列表：</font></font><a href="mailto:dev-subscribe@plc4x.apache.org"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">dev-subscribe@plc4x.apache.org</font></font></a></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache PLC4X 提交列表：</font></font><a href="mailto:commits-subscribe@plc4x.apache.org"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">commits-subscribe@plc4x.apache.org</font></font></a></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache PLC4X Jira 通知列表：</font></font><a href="mailto:issues-subscribe@plc4x.apache.org"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">issues-subscribe@plc4x.apache.org</font></font></a></li>
+</ul>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">另请参阅： https: </font></font><a href="https://plc4x.apache.org/mailing-lists.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">//plc4x.apache.org/mailing-lists.html</font></font></a></p>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">推特</font></font></h3><a id="user-content-twitter" class="anchor" aria-label="永久链接：推特" href="#twitter"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在 Twitter 上获取最新的 PLC4X 新闻： https: </font></font><a href="https://twitter.com/ApachePlc4x" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">//twitter.com/ApachePlc4x</font></font></a></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">贡献</font></font></h2><a id="user-content-contributing" class="anchor" aria-label="永久链接：贡献" href="#contributing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">您可以通过多种形式参与 PLC4X 项目。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">这些是但不限于：</font></font></p>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">提供信息和见解</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">测试 PLC4X 并提供反馈</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">提交拉取请求</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">提交错误报告</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在我们的邮件列表上积极沟通</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">推广项目（文章、博客文章、会议演讲）</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文档</font></font></li>
+</ul>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我们是一群非常友好的人，所以不要害怕向前迈出一步。</font><font style="vertical-align: inherit;">如果您想为 PLC4X 做出贡献，请查看我们的
+</font></font><a href="https://plc4x.apache.org/developers/contributing.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">贡献指南</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">！</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">许可</font></font></h2><a id="user-content-licensing" class="anchor" aria-label="永久链接：许可" href="#licensing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache PLC4X 根据 Apache 许可证版本 2.0 发布。</font></font></p>
+</article></div>
